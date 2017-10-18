@@ -1,10 +1,60 @@
+body {
+	background-color: red;
+	/*background-image: url("https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336378_960_720.jpg");*/
+	/*background-size: cover;*/
+	padding-bottom: 50px;
+}
+
+span {
+	padding: 0 30px;
+	width: 30px;
+	cursor: default;
+}
+
 i:hover {
 	cursor: pointer;
 }
 
-#clockTimer {
-	cursor: pointer;
+.jumbotron.text-center {
+	background-color: transparent;
+	padding-bottom: 0;
+}
+
+.counterRow {
+	cursor: default;
+	user-select: none;
+}
+
+#counterBox {
+	padding: 20px;
+}
+
+#breakTimer {
+	width: 50px;
 }
 
 #pomoInfo {
+	display: none;
+}
+
+#hideInfo {
+	display: none;
+}
+
+#timerBox {
+	background-color: green;
+	height: 140px;
+	width: 150px;
+	padding: 0px;
+	border-radius: 30%;
+	color: white;
+}
+
+#breakBox {
+	background-color: teal;
+	height: 140px;
+	width: 150px;
+	padding: 0px;
+	border-radius: 30%;
+	color: white;	
 }
