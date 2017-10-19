@@ -71,12 +71,14 @@ let timerReset = (display, timer)=> {
 
 $("#timerBox").on("click", ()=>{
 	$("#card").flip(true);
+	audio.play();
 	timerReset(clockTimer, origTimer);
 	status = "ready";
 });
 
 $("#breakBox").on("click", ()=>{
 	$("#card").flip(false);
+	audio.play();
 	timerReset(breakClock, origNum);
 	status = "ready";	
 });
