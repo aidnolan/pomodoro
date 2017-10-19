@@ -20,8 +20,8 @@ h1#titleId {
 	color: rgba(244, 246, 249, 0.9);
 	background-color: rgba(0, 220, 0, 0.2);
 	border-radius: 20px;
-	width: 70%;
-	margin: 0 50px 0 150px;
+	width: 60%;
+	margin: 0 100px 0 200px;
 }
 
 span#timer {
