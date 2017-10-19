@@ -1,18 +1,50 @@
 body {
-	background-color: red;
-	/*background-image: url("https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336378_960_720.jpg");*/
-	/*background-size: cover;*/
-	padding-bottom: 50px;
+	background: url("tomato.jpg") no-repeat center center fixed;
+	background-size: cover;
 }
 
-span {
-	padding: 0 30px;
-	width: 30px;
-	cursor: default;
+i {
+	user-select: none;
 }
 
 i:hover {
 	cursor: pointer;
+}
+
+button.btn {
+	margin: 0 10px;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+h1#titleId {
+	color: rgba(244, 246, 249, 0.9);
+	background-color: rgba(0, 220, 0, 0.2);
+	border-radius: 20px;
+	width: 70%;
+	margin: 0 50px 0 150px;
+}
+
+span#timer {
+	padding: 0 10px;
+}
+
+span#breakTimer {
+	padding: 0 10px;
+}
+
+
+.workColor {
+	background-color: rgba(10,200,10, 0.5);
+	border-radius: 30px;
+	font-size: 30px;
+
+}
+
+.breakColor {
+	background-color: rgba(66, 143, 244, 0.5);;
+	border-radius: 30px;
+	font-size: 30px;
+
 }
 
 .jumbotron.text-center {
@@ -23,14 +55,21 @@ i:hover {
 .counterRow {
 	cursor: default;
 	user-select: none;
+	color: rgba(244, 246, 249, 0.9);
 }
 
-#counterBox {
-	padding: 20px;
+#card {
+	padding: 50px 0px;
+}
+
+#timer {
+	cursor: default;
+	padding: 0 5px;
 }
 
 #breakTimer {
-	width: 50px;
+	cursor: default;
+	padding: 0 5px;
 }
 
 #pomoInfo {
@@ -42,19 +81,30 @@ i:hover {
 }
 
 #timerBox {
-	background-color: green;
+	background-color: rgba(10,200,10, 0.5);;
 	height: 140px;
 	width: 150px;
 	padding: 0px;
 	border-radius: 30%;
-	color: white;
+	
 }
 
 #breakBox {
-	background-color: teal;
+	background-color: rgba(66, 143, 244, 0.5);
 	height: 140px;
 	width: 150px;
 	padding: 0px;
-	border-radius: 30%;
-	color: white;	
+	border-radius: 30%;	
+}
+
+#counterBox {
+	padding-bottom: 20px;
+	/*border-radius: 50px;*/
+}
+
+#infoBox {
+	color: rgba(244, 246, 249, 0.9);
+	background-color: rgba(0, 220, 0, 0.1);
+	border-radius: 20px;
+	margin-bottom: 60px;
 }
