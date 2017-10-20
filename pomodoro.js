@@ -1,4 +1,3 @@
-(function(){
 
 // Card flip set-up so timers can change seamlessly between Work & Break
 
@@ -176,4 +175,3 @@ $("#hideInfo").on("click", ()=>{
 });
 
 
-});
