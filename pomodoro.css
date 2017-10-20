@@ -20,8 +20,7 @@ h1#titleId {
 	color: rgba(244, 246, 249, 0.9);
 	background-color: rgba(0, 220, 0, 0.2);
 	border-radius: 20px;
-	width: 60%;
-	margin: 0 100px 0 200px;
+	margin: 0 20%;
 }
 
 span#timer {
@@ -36,14 +35,14 @@ span#breakTimer {
 .workColor {
 	background-color: rgba(10,200,10, 0.5);
 	border-radius: 30px;
-	font-size: 30px;
+	font-size: 2.1em;
 
 }
 
 .breakColor {
 	background-color: rgba(66, 143, 244, 0.5);;
 	border-radius: 30px;
-	font-size: 30px;
+	font-size: 2.1em;
 
 }
 
@@ -59,7 +58,7 @@ span#breakTimer {
 }
 
 #card {
-	padding: 50px 0px;
+	padding: 3.5em 0;
 }
 
 #timer {
@@ -98,7 +97,8 @@ span#breakTimer {
 }
 
 #counterBox {
-	padding-bottom: 20px;
+	padding-bottom: 3em;
+	/*border-radius: 50px;*/
 }
 
 #infoBox {
