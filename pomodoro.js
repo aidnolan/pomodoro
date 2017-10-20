@@ -1,4 +1,7 @@
+(function(){
+
 // Card flip set-up so timers can change seamlessly between Work & Break
+
 $(cardFlip = ()=>{
     $("#card").flip({
         axis: "x",
@@ -173,3 +176,4 @@ $("#hideInfo").on("click", ()=>{
 });
 
 
+});
