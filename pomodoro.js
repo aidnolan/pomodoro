@@ -9,7 +9,7 @@ $(cardFlip = ()=>{
     });
 });
 
-let audio = new Audio('flip.wav');
+let audio = new Audio('Flip.wav');
 
 // Breakdown of DOM/jQuery components into variables
 let origNum 	= parseFloat($("#breakTimer").text()),
