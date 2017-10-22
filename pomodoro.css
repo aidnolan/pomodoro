@@ -20,10 +20,8 @@ h1#titleId {
 	color: rgba(244, 246, 249, 0.9);
 	background-color: rgba(0, 220, 0, 0.2);
 	border-radius: 20px;
-	margin: 0 15%;
+	margin: 0 20%;
 	font-size: 4em;
-HEAD
-adjust title box width. Change font-size from px to em
 }
 
 span#timer {
