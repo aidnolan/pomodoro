@@ -89,7 +89,7 @@ span#breakTimer {
 #timerBox {
 	background-color: rgba(10,200,10, 0.5);;
 	height: 140px;
-	width: 150px;
+	width: 158px;
 	padding: 0px;
 	border-radius: 30%;
 	
@@ -98,7 +98,7 @@ span#breakTimer {
 #breakBox {
 	background-color: rgba(66, 143, 244, 0.5);
 	height: 140px;
-	width: 150px;
+	width: 158px;
 	padding: 0px;
 	border-radius: 30%;	
 }
