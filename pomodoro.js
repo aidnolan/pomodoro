@@ -1,7 +1,7 @@
 
 // Card flip set-up so timers can change seamlessly between Work & Break
 
-$(cardFlip = ()=>{
+$(cardFlip = function(){
     $("#card").flip({
         axis: "x",
         reverse: false,
@@ -71,14 +71,14 @@ let timerReset = (display, timer)=> {
 	}
 }
 
-$("#timerBox").on("click", ()=>{
+$("#timerBox").on("click", function(){
 	$("#card").flip(true);
 	audio.play();
 	timerReset(clockTimer, origTimer);
 	status = "ready";
 });
 
-$("#breakBox").on("click", ()=>{
+$("#breakBox").on("click", function(){
 	$("#card").flip(false);
 	audio.play();
 	timerReset(breakClock, origNum);
@@ -86,7 +86,7 @@ $("#breakBox").on("click", ()=>{
 });
 
 // Start stop and reset buttons to control the clocks
-$("#startBtn").on("click",()=>{
+$("#startBtn").on("click",function(){
 	if(status == "running"){
 		return;
 	}
@@ -102,18 +102,18 @@ $("#startBtn").on("click",()=>{
 	console.log(status);
 });
 
-$("#stopBtn").on("click", ()=>{
+$("#stopBtn").on("click", function(){
 	status = "ready";
 });
 
-$("#resetBtn").on("click", ()=>{
+$("#resetBtn").on("click", function(){
 	status = "ready";
 	timerReset(clockTimer, origTimer);
 	timerReset(breakClock, origNum);	
 });
 
 // Plus and minus buttons to increase/decrease session lengths
-$("#minusTimer").on("click", ()=>{
+$("#minusTimer").on("click", function(){
 	if(origTimer > 1){
 		$("#timer").text(origTimer - 1)
 		origTimer -= 1;
@@ -125,7 +125,7 @@ $("#minusTimer").on("click", ()=>{
 	}
 });
 
-$("#plusTimer").on("click", ()=>{
+$("#plusTimer").on("click", function(){
 	if(origTimer > 0){
 		$("#timer").text(origTimer + 1)
 		origTimer += 1;
@@ -137,7 +137,7 @@ $("#plusTimer").on("click", ()=>{
 	}
 });
 
-$("#minusBreak").on("click", ()=>{
+$("#minusBreak").on("click", function(){
 	if(origNum > 1){
 		$("#breakTimer").text(origNum - 1)
 		origNum -= 1;
@@ -149,7 +149,7 @@ $("#minusBreak").on("click", ()=>{
 	}
 });
 
-$("#plusBreak").on("click", ()=>{
+$("#plusBreak").on("click", function(){
 	if(origNum > 0){
 		$("#breakTimer").text(origNum + 1)
 		origNum += 1;
@@ -162,13 +162,13 @@ $("#plusBreak").on("click", ()=>{
 });
 
 // Intro and information reveal/hide
-$("#expandInfo").on("click", ()=>{
+$("#expandInfo").on("click", function(){
 	$("#pomoInfo").show();
 	$("#hideInfo").show();
 	$("#expandInfo").hide();
 });
 
-$("#hideInfo").on("click", ()=>{
+$("#hideInfo").on("click", function(){
 	$("#pomoInfo").hide();
 	$("#hideInfo").hide();
 	$("#expandInfo").show();
