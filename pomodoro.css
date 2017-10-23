@@ -4,10 +4,10 @@ body {
 }
 
 i {
-	user-select: none;
+	/*user-select: none;
 	-moz-user-select: none;
 	-webkit-user-select: none;
-	-ms-user-select: none;
+	-ms-user-select: none;*/
 }
 
 i:hover {
@@ -57,10 +57,10 @@ span#breakTimer {
 
 .counterRow {
 	cursor: default;
-	user-select: none;
+	/*user-select: none;
 	-moz-user-select: none;
 	-webkit-user-select: none;
-	-ms-user-select: none;
+	-ms-user-select: none;*/
 	color: rgba(244, 246, 249, 0.9);
 }
 

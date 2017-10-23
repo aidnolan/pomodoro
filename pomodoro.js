@@ -162,13 +162,13 @@ $("#plusBreak").on("click", function(){
 });
 
 // Intro and information reveal/hide
-$("#expandInfo").on("click", function(){
+$("#expandInfo").on("mouseup touchstart", function(){
 	$("#pomoInfo").show();
 	$("#hideInfo").show();
 	$("#expandInfo").hide();
 });
 
-$("#hideInfo").on("click", function(){
+$("#hideInfo").on("mouseup touchstart", function(){
 	$("#pomoInfo").hide();
 	$("#hideInfo").hide();
 	$("#expandInfo").show();
