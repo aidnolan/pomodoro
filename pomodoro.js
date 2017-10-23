@@ -23,16 +23,16 @@ let origNum 	= parseFloat($("#breakTimer").text()),
 	status		= "ready";		
 
 // 
-let timeSet = (timer)=> {
+let timeSet = function(timer) {
 	let timeArr = timer.text().split(":");
 	console.log(timeArr);
 	return (parseInt(timeArr[0]) * 60 + parseInt(timeArr[1])).toString();
 }
 
 // Function to start timer and esnure seamless flow between the two timers
-let startTimer = (duration, display) => {
+let startTimer = function(duration, display) {
 	let timer = duration, minutes, seconds;
-	let runningClock = setInterval(() => {
+	let runningClock = setInterval(function() {
 		if(status == "ready"){
         	return clearInterval(runningClock);
     	}
@@ -63,7 +63,7 @@ let startTimer = (duration, display) => {
 }
 
 // Used to realign timers with the set times above the clock 
-let timerReset = (display, timer)=> {
+let timerReset = function(display, timer) {
 	if(timer > 9){
 		display.text(timer.toString() + ":" + "00");
 	} else {
