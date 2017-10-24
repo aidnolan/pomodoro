@@ -1,4 +1,4 @@
-
+(function(){
 // Card flip set-up so timers can change seamlessly between Work & Break
 
 $(cardFlip = function(){
@@ -174,4 +174,4 @@ $("#hideInfo").on("click", function(){
 	$("#expandInfo").show();
 });
 
-
+})();
