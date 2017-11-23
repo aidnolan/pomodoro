@@ -27,14 +27,9 @@ h1#titleId {
 	font-size: 4em;
 }
 
-span#timer {
+span#timer, span#breakTimer {
 	padding: 0 10px;
 }
-
-span#breakTimer {
-	padding: 0 10px;
-}
-
 
 .workColor {
 	background-color: rgba(10,200,10, 0.5);
@@ -68,12 +63,7 @@ span#breakTimer {
 	padding: 3.5em 0;
 }
 
-#timer {
-	cursor: default;
-	padding: 0 5px;
-}
-
-#breakTimer {
+#timer, #breakTimer {
 	cursor: default;
 	padding: 0 5px;
 }
@@ -92,6 +82,7 @@ span#breakTimer {
 	width: 158px;
 	padding: 0px;
 	border-radius: 30%;
+	cursor: pointer;
 	
 }
 
@@ -100,7 +91,8 @@ span#breakTimer {
 	height: 140px;
 	width: 158px;
 	padding: 0px;
-	border-radius: 30%;	
+	border-radius: 30%;
+	cursor: pointer;
 }
 
 #counterBox {
