@@ -1,5 +1,7 @@
 module.exports = (grunt)=> {
 
+grunt.registerTask("default", ["concat", "watch"]);
+
 grunt.initConfig({
   concat: {
     dist: {

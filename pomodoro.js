@@ -29,7 +29,7 @@ let timeSet = function(timer) {
 	return (parseInt(timeArr[0]) * 60 + parseInt(timeArr[1])).toString();
 }
 
-// Function to start timer and esnure seamless flow between the two timers
+// Function to start timer and ensure seamless flow between the two timers
 let startTimer = function(duration, display) {
 	let timer = duration, minutes, seconds;
 	let runningClock = setInterval(function() {
@@ -46,12 +46,14 @@ let startTimer = function(duration, display) {
         display.text(minutes + ":" + seconds);
         
         if (--timer < 0) {
+        	console.log(timer);
         	clearInterval(runningClock);
+
             timer = duration;
             // status = "ready";
-			$("#card").flip('toggle');
+			$("#card").flip("toggle");
 			audio.play();
-			if($("#timerBox").css("z-index") == 1){
+			if($("#timerBox").css("z-index") != 1){
 				startTimer(timeSet(clockTimer),clockTimer);
 			} else {
 				startTimer(timeSet(breakClock),breakClock);
@@ -175,3 +177,4 @@ $("#hideInfo").on("click", function(){
 });
 
 })();
+
