@@ -1,4 +1,4 @@
-(function(){
+(() => {
 // Card flip set-up so timers can change seamlessly between Work & Break
 
 $(cardFlip = () => {
@@ -32,7 +32,7 @@ let timeSet = (timer) => {
 // Function to start timer and ensure seamless flow between the two timers
 let startTimer = (duration, display) => {
 	let timer = duration, minutes, seconds;
-	let runningClock = setInterval(function() {
+	let runningClock = setInterval(() => {
 		if(status == "ready"){
         	return clearInterval(runningClock);
     	}
