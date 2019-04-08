@@ -1,7 +1,7 @@
 (function(){
 // Card flip set-up so timers can change seamlessly between Work & Break
 
-$(cardFlip = function(){
+$(cardFlip = () => {
     $("#card").flip({
         axis: "x",
         reverse: false,
@@ -23,14 +23,14 @@ let origNum 	= parseFloat($("#breakTimer").text()),
 	status		= "ready";		
 
 // 
-let timeSet = function(timer) {
+let timeSet = (timer) => {
 	let timeArr = timer.text().split(":");
 	console.log(timeArr);
 	return (parseInt(timeArr[0]) * 60 + parseInt(timeArr[1])).toString();
 }
 
 // Function to start timer and ensure seamless flow between the two timers
-let startTimer = function(duration, display) {
+let startTimer = (duration, display) => {
 	let timer = duration, minutes, seconds;
 	let runningClock = setInterval(function() {
 		if(status == "ready"){
@@ -65,7 +65,7 @@ let startTimer = function(duration, display) {
 }
 
 // Used to realign timers with the set times above the clock 
-let timerReset = function(display, timer) {
+let timerReset = (display, timer) => {
 	if(timer > 9){
 		display.text(timer.toString() + ":" + "00");
 	} else {
@@ -73,22 +73,24 @@ let timerReset = function(display, timer) {
 	}
 }
 
-$("#timerBox").on("click", function(){
+$("#timerBox").on("click", () => {
 	$("#card").flip(true);
 	audio.play();
 	timerReset(clockTimer, origTimer);
+	timerReset(breakClock, origNum);
 	status = "ready";
 });
 
-$("#breakBox").on("click", function(){
+$("#breakBox").on("click", () => {
 	$("#card").flip(false);
 	audio.play();
 	timerReset(breakClock, origNum);
+	timerReset(clockTimer, origTimer);
 	status = "ready";	
 });
 
 // Start stop and reset buttons to control the clocks
-$("#startBtn").on("click",function(){
+$("#startBtn").on("click",() => {
 	if(status == "running"){
 		return;
 	}
@@ -104,18 +106,18 @@ $("#startBtn").on("click",function(){
 	console.log(status);
 });
 
-$("#stopBtn").on("click", function(){
+$("#stopBtn").on("click", () =>{
 	status = "ready";
 });
 
-$("#resetBtn").on("click", function(){
+$("#resetBtn").on("click", () => {
 	status = "ready";
 	timerReset(clockTimer, origTimer);
 	timerReset(breakClock, origNum);	
 });
 
 // Plus and minus buttons to increase/decrease session lengths
-$("#minusTimer").on("click", function(){
+$("#minusTimer").on("click", () => {
 	if(origTimer > 1){
 		$("#timer").text(origTimer - 1)
 		origTimer -= 1;
@@ -127,7 +129,7 @@ $("#minusTimer").on("click", function(){
 	}
 });
 
-$("#plusTimer").on("click", function(){
+$("#plusTimer").on("click", () => {
 	if(origTimer > 0){
 		$("#timer").text(origTimer + 1)
 		origTimer += 1;
@@ -139,7 +141,7 @@ $("#plusTimer").on("click", function(){
 	}
 });
 
-$("#minusBreak").on("click", function(){
+$("#minusBreak").on("click", () => {
 	if(origNum > 1){
 		$("#breakTimer").text(origNum - 1)
 		origNum -= 1;
@@ -151,7 +153,7 @@ $("#minusBreak").on("click", function(){
 	}
 });
 
-$("#plusBreak").on("click", function(){
+$("#plusBreak").on("click", () => {
 	if(origNum > 0){
 		$("#breakTimer").text(origNum + 1)
 		origNum += 1;
@@ -164,13 +166,13 @@ $("#plusBreak").on("click", function(){
 });
 
 // Intro and information reveal/hide
-$("#expandInfo").on("click", function(){
+$("#expandInfo").on("click", () => {
 	$("#pomoInfo").show();
 	$("#hideInfo").show();
 	$("#expandInfo").hide();
 });
 
-$("#hideInfo").on("click", function(){
+$("#hideInfo").on("click", () => {
 	$("#pomoInfo").hide();
 	$("#hideInfo").hide();
 	$("#expandInfo").show();
